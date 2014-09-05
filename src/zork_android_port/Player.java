@@ -3,21 +3,20 @@ package zork_android_port;
 import java.lang.*;
 import java.util.*;
 
-public class Player 
+public class Player
 {
-	private ArrayList<Item> Inventory = new ArrayList<Item>();
-	
-	public void getItem(Item newItem)
+    private ArrayList<Item> Inventory = new ArrayList<Item>();
+
+    public void getItem(Item newItem)
+    {
+	Inventory.add(newItem);
+    }
+
+    public void printInventory()
+    {
+	for (Item item : Inventory)
 	{
-		Inventory.add(newItem);
+	    System.out.println(item);
 	}
-	
-	public void printInventory()
-	{
-		for(Item item: Inventory)
-		{
-			System.out.println(item);
-		}
-	}
-	
+    }
 }
